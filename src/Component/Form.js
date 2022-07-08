@@ -13,7 +13,8 @@ function Form() {
   const [error, setError] = useState(false)
 
   const submit = async () => {
-    if (!name || !email || !mobile || appintmentDate) {
+    // console.log(name);
+    if (!name || !email || !mobile || !appintmentDate) {
       alert("Please enter the detail");
     } else {
       try {
@@ -27,6 +28,10 @@ function Form() {
         console.log(res.data.message);
         if (res.data.message === "Your Response Saved Successfully") {
           alert("Your requested have submitted");
+          setName('')
+          setAppintmentDate()
+          setEmail('')
+          setMobile()
         }
       } catch (err) {
         console.log(err);
@@ -34,11 +39,11 @@ function Form() {
     }
   };
 
-  useEffect(()=>{
-    if (!name || !email || !mobile || appintmentDate){
-      setError(true)
-    }
-  }, [name , email , mobile , appintmentDate])
+  // useEffect(()=>{
+  //   if (!name || !email || !mobile || appintmentDate){
+  //     setError(true)
+  //   }
+  // }, [name , email , mobile , appintmentDate])
 
   return (
     <div className="form">
@@ -46,22 +51,22 @@ function Form() {
         <h1>Book an Appointment</h1>
         <div className="inputs">
           <div>
-            <input type="text" placeholder="Full Name" />
+            <input onChange={(e) => {setName(e.target.value)}} type="text" placeholder="Full Name" />
 
           </div>
           <div>
-            <input onChange={(e)=>setMobile(e.target.value)} type="text" placeholder="Mobile Number" />
+            <input onChange={(e)=>{setMobile(e.target.value)}} type="text" placeholder="Mobile Number" />
           </div>
           <div>
-            <input type="text" placeholder="Email Address" />
+            <input onChange={(e)=>{setEmail(e.target.value)}} type="text" placeholder="Email Address" />
 
           </div>
           <div>
-            <input type="date" placeholder="Appointment Date" />
+            <input onChange={(e)=>{setAppintmentDate(e.target.value)}} type="date" placeholder="Appointment Date" />
             
 
           </div>
-          <button disabled={error} style={{cursor:!error && 'pointer'}} onClick={submit}>Book Now</button>
+          <button disabled={error}  onClick={submit}>Book Now</button>
         </div>
       </div>
       <div className="right">

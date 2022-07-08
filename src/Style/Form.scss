@@ -37,7 +37,8 @@
 
     & button:hover{
         // letter-spacing: 0.5px;
-        // cursor: pointer;
+        cursor: pointer;
+        background-color: $Desc-color;
     }
 
     & button{
