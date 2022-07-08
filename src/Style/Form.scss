@@ -76,3 +76,30 @@
         margin-left: 40%;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .form {
+            @include flexbox(center);
+            flex-direction: column;
+        }
+        .right{
+            & img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+}
+
+@media screen and (max-width: 550px) {
+    .form {
+        @include flexbox(center);
+        flex-direction: column;
+    }
+
+    .right {
+        & img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

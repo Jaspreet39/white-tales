@@ -15,7 +15,7 @@ function About() {
           <br /> euismod luctus quam. Curabitur quis bibendum augue.
           <br /> Nam convallis blandit sapien in molestie.
         </p>
-        <div className="box" />
+        {/* <div className="box" /> */}
       </div>
     </div>
   );

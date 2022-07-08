@@ -25,7 +25,39 @@
 .bottomRight {
     background-color: #BDBDBD;
     width: 80%;
-    height: 600px;
+    height: 60vh;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+}
+
+@media screen and (max-width: 450px) {
+    .bottomLeft{
+        & h1{
+            font-size: 20px;
+        }
+
+        & p{
+            font-size: 9px;
+        }
+    }
+
+    .bottomRight{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .bottomLeft {
+        & h1 {
+            font-size: 20px;
+        }
+
+        & p {
+            font-size: 9px;
+        }
+    }
+
+    .bottomRight {
+        height: 400px;
+    }
 }

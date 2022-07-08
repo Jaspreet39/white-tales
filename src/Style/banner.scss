@@ -1,18 +1,37 @@
 @import '../Style//mixin.scss';
-.banner{
+
+.banner {
     margin: auto;
     width: 100%;
     @include flexbox(center);
 
-    & .bannerImg{
+    & .bannerImg {
         height: 600px;
         width: 100%;
         background-color: #D9D9D9;
         border-radius: 20px;
 
-        & img{
+        & img {
             border-radius: 20px;
             object-fit: fill;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .banner {
+
+        & .bannerImg {
+            height: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .banner {
+
+        & .bannerImg {
+            height: 400px;
         }
     }
 }

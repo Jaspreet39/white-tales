@@ -9,7 +9,7 @@ function Showcase() {
         <div className="showcaseUpperImages">
           <div className="showcaseImage">
             <div className="firstImg"></div>
-            <div className="secondImg"></div>
+            {/* <div className="secondImg"></div> */}
           </div>
         </div>
         <div className="showcaseUpperTitle">

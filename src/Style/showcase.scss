@@ -10,6 +10,7 @@
 .showcase {
     margin-top: 5%;
     padding-right: 20px;
+    padding-bottom: 5%;
 }
 
 .showcaseUpper {
@@ -35,6 +36,7 @@
         font-size: 40px;
         font-weight: 400;
         color: $Title-color;
+
     }
 
     & p {
@@ -46,7 +48,8 @@
 .showcaseLower {
     @include flexbox(space-between)
 }
-.showcaseLowerLeft{
+
+.showcaseLowerLeft {
     padding-left: 5%;
 }
 
@@ -81,6 +84,158 @@
         border-radius: 20px;
         position: absolute;
         left: 20%;
-       
+
     }
+}
+
+
+@media screen and (max-width: 1500px) {
+
+    .showcaseLowerLeft {
+        width: 40%;
+    }
+
+    .showcaseLowerRight {
+        height: 500px;
+        width: 500px;
+
+        & .firstImg {
+            @include image(250px, 180px, #D9D9D9);
+        }
+
+        & .secondImage {
+            @include image(250px, 180px, #BDBDBD);
+        }
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1200px) {
+    .showcaseLowerRight {
+        height: 400px;
+        width: 500px;
+
+        & .firstImg {
+            @include image(200px, 150px, #D9D9D9);
+        }
+
+        & .secondImage {
+            @include image(200px, 130px, #BDBDBD);
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .showcase {
+        padding-left: 2%;
+    }
+
+    .showcaseUpperTitle {
+        margin-left: 10%;
+
+        & h1 {
+            font-size: 12px;
+        }
+
+        & p {
+            font-size: 10px;
+            // text-align: justify
+        }
+    }
+
+    .showcaseImage {
+        & .firstImg {
+            @include image(160px, 120px, #D9D9D9);
+        }
+    }
+    .showcaseLower{
+        margin: 5% 0;
+    }
+
+    .showcaseLowerLeft {
+        & h1 {
+            font-size: 12px;
+        }
+
+        & p {
+            font-size: 10px;
+            // text-align: justify
+        }
+    }
+
+    .showcaseLowerRight {
+        height: 200px;
+        width: 250px;
+
+        & .firstImg {
+                @include image(100px, 80px, #D9D9D9);
+                border-radius: 10px;
+            }
+        
+            & .secondImage {
+                @include image(100px, 70px, #BDBDBD);
+                border-radius: 10px;
+            }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .showcase {
+        padding-left: 2%;
+    }
+
+    .showcaseUpperTitle {
+        margin-left: 10%;
+
+        & h1 {
+            font-size: 12px;
+        }
+
+        & p {
+            font-size: 10px;
+            // text-align: justify
+        }
+    }
+
+    .showcaseImage {
+        & .firstImg {
+            @include image(160px, 120px, #D9D9D9);
+        }
+    }
+
+    .showcaseLower {
+        margin: 5% 0;
+    }
+
+    .showcaseLowerLeft {
+        & h1 {
+            font-size: 12px;
+        }
+
+        & p {
+            font-size: 10px;
+            // text-align: justify
+        }
+    }
+
+    .showcaseLowerRight {
+        height: 200px;
+        width: 200px;
+
+        & .firstImg {
+            @include image(100px, 80px, #D9D9D9);
+            border-radius: 10px;
+        }
+
+        & .secondImage {
+            @include image(100px, 70px, #BDBDBD);
+            border-radius: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 420px){
+    .showcaseLowerRight {
+            height: 180px;
+            width: 180px;
+        }
 }
