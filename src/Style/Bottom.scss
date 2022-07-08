@@ -1,0 +1,6 @@
+@import '../Style/Variable.scss';
+@import '../Style/mixin.scss';
+.bottom{
+    background-color: $Desc-color;
+    padding-bottom: 5%;
+}

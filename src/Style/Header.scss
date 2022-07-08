@@ -1,0 +1,19 @@
+@import '../Style/mixin.scss';
+
+.header {
+    @include flexbox(space-between);
+    padding: 20px;
+    & h1{
+        font-size: 25px;
+        font-weight: 600;
+        font-style: sens-serif;
+        color: #968255;
+    }
+
+    & p{
+        font-size: 14px;
+        font-weight: 400;
+        color: #AC8735;
+    }
+}
+

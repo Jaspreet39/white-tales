@@ -1,0 +1,43 @@
+@import '../Style/mixin.scss';
+@import '../Style/Variable.scss';
+
+.about {
+    width: 100%;
+    background: linear-gradient(90deg, #D9D9D9 50%, #C7A55B 50%);
+    height: 85vh;
+    @include flexbox(center);
+    border-radius: 20px;
+    position: relative;
+    
+
+    & .aboutContainer {
+        width: 80%;
+        @include flexbox(center);
+        flex-direction: column;
+        z-index: 1;
+
+        & .box {
+            height: 380px;
+            width: 280px;
+            background-color: #BDBDBD;
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            border-radius: 20px;
+            z-index: 0;
+        }
+    }
+
+    & h1 {
+        font-size: 60px;
+        font-weight: 300;
+        color: #fff;
+    }
+
+    & p {
+        font-size: 12px;
+        color: #fff;
+        margin-left: 25%;
+        margin-top: 50px;
+    }
+}
