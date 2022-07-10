@@ -32,7 +32,7 @@ function Home() {
       <Header />
       <ScrollContainer>
         <ScrollPage page={0}>
-          <Animator animation={FadeUp}>
+          <Animator animation={ZoomOut()}>
             <Banner />
           </Animator>
         </ScrollPage>
