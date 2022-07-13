@@ -11,25 +11,43 @@
     margin-top: 5%;
     padding-right: 20px;
     padding-bottom: 5%;
-    height: 50vh
+    height: 85vh
 }
 
 .showcaseUpper {
     @include flexbox(space-between);
-    padding-right: 5%;
+    padding: 0 5%;
 }
 
 .showcaseImage {
     position: relative;
+
+    & .firstImg {
+        @include image(250px,350px, #BDBDBD);
+        border-radius: 20px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+        & img {
+            border-radius: 10px;
+        }
+    }
+
+    & .secondImg {
+        position: absolute;
+        @include image(300px,220px, #BDBDBD);
+        border-radius: 20px;
+        top: -10%;
+        left: 30%;
+
+        & img {
+            border-radius: 10px;
+        }
+    }
 }
 
-.firstImg {
-    @include image(380px, 300px, #BDBDBD);
-    border-radius: 20px;
 
-    & img{
-        border-radius: 20px;
-    }
+.showcaseUpperImages {
+    margin-left: 5%;
 }
 
 
@@ -41,6 +59,7 @@
         font-size: 40px;
         font-weight: 400;
         color: $Title-color;
+        display: none;
 
     }
 
@@ -51,7 +70,7 @@
 }
 
 .showcaseLower {
-    @include flexbox(space-between)
+    @include flexbox(space-between);
 }
 
 .showcaseLowerLeft {
@@ -61,42 +80,35 @@
 .showcaseLowerRight {
     @include flexbox(center);
     position: relative;
-    margin-top: -5%;
-    height: 550px;
-    width: 550px;
+    margin-top: -2%;
+    height: 600px;
+    width: 600px;
     position: relative;
     background-image: url('../assets/images/logo_small3.png');
     background-position: center;
     background-size: cover;
 
-    // & .firstImg {
-    //     position: absolute;
-    //     top: 0px;
-    //     left: 0;
-    //     right: 0;
-    //     bottom: 0;
-    // }
-
-    & .firstImg {
+    & .showcaseLowerRightfirstImg {
         @include image(250px, 350px, #D9D9D9);
         border-radius: 20px;
         // transform: rotate(90deg);
         margin-left: 15%;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 
         & img {
-                border-radius: 20px;
-            }
+            border-radius: 10px;
+        }
     }
 
-    & .secondImage {
+    & .showcaseLowerRightsecondImage {
         @include image(300px, 220px, #BDBDBD);
         border-radius: 20px;
         position: absolute;
         left: 20%;
 
         & img {
-                border-radius: 20px;
-            }
+            border-radius: 10px;
+        }
 
     }
 }
@@ -112,28 +124,74 @@
         height: 500px;
         width: 500px;
 
-        & .firstImg {
+        & .showcaseLowerRightfirstImg {
             @include image(250px, 180px, #D9D9D9);
         }
 
-        & .secondImage {
+        & .showcaseLowerRightsecondImage {
             @include image(250px, 180px, #BDBDBD);
+        }
+    }
+
+    .showcaseImage {
+        position: relative;
+
+        & .firstImg {
+            @include image(280px, 420px, #BDBDBD);
+            border-radius: 20px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+            & img {
+                border-radius: 20px;
+            }
+        }
+
+        & .secondImg {
+            position: absolute;
+            @include image(340px, 270px, #BDBDBD);
+            border-radius: 20px;
+            top: -10%;
+            left: 30%;
+
+            & img {
+                border-radius: 20px;
+            }
         }
     }
 }
 
 @media screen and (min-width: 500px) and (max-width: 1200px) {
+    .showcaseUpperTitle {
+        margin-left: 10%;
+    }
+
     .showcaseLowerRight {
         height: 400px;
-        width: 500px;
+        width: 400px;
+
+        & .showcaseLowerRightfirstImg {
+            @include image(150px, 150px, #D9D9D9);
+        }
+
+        & .showcaseLowerRightsecondImage {
+            @include image(180px, 130px, #BDBDBD);
+        }
+    }
+
+    .showcaseImage {
+        position: relative;
 
         & .firstImg {
-            @include image(200px, 150px, #D9D9D9);
+            @include image(150px, 220px, #BDBDBD);
         }
 
-        & .secondImage {
-            @include image(200px, 130px, #BDBDBD);
+        & .secondImg {
+            @include image(200px, 140px, #BDBDBD);
         }
+    }
+
+    .showcaseLower {
+        margin-top: 5%;
     }
 }
 
@@ -141,64 +199,8 @@
     .showcase {
         padding-left: 2%;
         @include flexbox(center);
-            flex-direction: column;
-            margin-top: 40%;
-    }
-
-    .showcaseUpperTitle {
-        margin-left: 10%;
-
-        & h1 {
-            font-size: 12px;
-        }
-
-        & p {
-            font-size: 10px;
-            // text-align: justify
-        }
-    }
-
-    .showcaseImage {
-        & .firstImg {
-            @include image(160px, 120px, #D9D9D9);
-        }
-    }
-    .showcaseLower{
-        margin: 5% 0;
-    }
-
-    .showcaseLowerLeft {
-        & h1 {
-            font-size: 12px;
-        }
-
-        & p {
-            font-size: 10px;
-            // text-align: justify
-        }
-    }
-
-    .showcaseLowerRight {
-        height: 200px;
-        width: 250px;
-
-        & .firstImg {
-                @include image(100px, 80px, #D9D9D9);
-                border-radius: 10px;
-            }
-        
-            & .secondImage {
-                @include image(100px, 70px, #BDBDBD);
-                border-radius: 10px;
-            }
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .showcase {
-        padding-left: 2%;
-        @include flexbox(center);
         flex-direction: column;
+        margin-top: -30%;
     }
 
     .showcaseUpperTitle {
@@ -215,8 +217,28 @@
     }
 
     .showcaseImage {
+        position: relative;
+
         & .firstImg {
-            @include image(160px, 120px, #D9D9D9);
+            @include image(140px, 100px, #BDBDBD);
+            border-radius: 20px;
+            //  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+            & img {
+                border-radius: 20px;
+            }
+        }
+
+        & .secondImg {
+            position: absolute;
+            @include image(140px, 100px, #BDBDBD);
+            border-radius: 20px;
+            top: -10%;
+            left: 30%;
+
+            & img {
+                border-radius: 20px;
+            }
         }
     }
 
@@ -237,23 +259,100 @@
 
     .showcaseLowerRight {
         height: 200px;
-        width: 200px;
+        width: 250px;
 
-        & .firstImg {
-            @include image(100px, 80px, #D9D9D9);
+        & .showcaseLowerRightfirstImg {
+            @include image(100px, 50px, #D9D9D9);
             border-radius: 10px;
         }
 
-        & .secondImage {
-            @include image(100px, 70px, #BDBDBD);
+        & .showcaseLowerRightsecondImage {
+            @include image(100px, 20px, #BDBDBD);
             border-radius: 10px;
         }
     }
 }
 
-@media screen and (max-width: 420px){
-    .showcaseLowerRight {
-            height: 180px;
-            width: 180px;
+@media screen and (max-width: 550px) {
+    .showcase {
+        padding-left: 2%;
+        @include flexbox(center);
+        flex-direction: column;
+    }
+
+    .showcaseUpperTitle {
+        margin-left: 20%;
+
+        & h1 {
+            font-size: 12px;
         }
+
+        & p {
+            font-size: 10px;
+            // text-align: justify
+        }
+    }
+
+    .showcaseImage {
+        position: relative;
+
+        & .firstImg {
+            @include image(80px, 120px, #BDBDBD);
+            border-radius: 20px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+            & img {
+                border-radius: 15px;
+            }
+        }
+
+        & .secondImg {
+            position: absolute;
+            @include image(110px, 75px, #BDBDBD);
+            border-radius: 20px;
+            top: -15%;
+            left: 30%;
+
+            & img {
+                border-radius: 15px;
+            }
+        }
+    }
+
+    .showcaseLower {
+        // margin: 5% 0;
+    }
+
+    .showcaseLowerLeft {
+        & h1 {
+            font-size: 12px;
+        }
+
+        & p {
+            font-size: 10px;
+            // text-align: justify
+        }
+    }
+
+    .showcaseLowerRight {
+        height: 200px;
+        width: 200px;
+
+        & .showcaseLowerRightfirstImg {
+            @include image(80px, 100px, #D9D9D9);
+            border-radius: 5px;
+        }
+
+        & .showcaseLowerRightsecondImage {
+            @include image(110px, 70px, #BDBDBD);
+            border-radius: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .showcaseLowerRight {
+        height: 180px;
+        width: 180px;
+    }
 }

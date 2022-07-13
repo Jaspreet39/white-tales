@@ -15,7 +15,14 @@ function About() {
           <br /> euismod luctus quam. Curabitur quis bibendum augue.
           <br /> Nam convallis blandit sapien in molestie.
         </p>
-        {/* <div className="box" /> */}
+        <div className="box">
+          <img
+            src="https://i.pinimg.com/originals/71/86/04/718604e669d5a650f361774bcde04de9.jpg"
+            alt=""
+            height="100%"
+            width="100%"
+          />
+        </div>
       </div>
     </div>
   );

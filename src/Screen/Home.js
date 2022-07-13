@@ -25,33 +25,33 @@ import "../Style/Home.scss";
 
 function Home() {
     const FadeUp = batch(Fade(), Move());
-    const FadeUp2 = batch(Fade(), Move(),ZoomOut());
+    const FadeUp2 = batch(Fade(),MoveIn(),ZoomOut());
     const ZoomInScrollOut = batch(FadeIn(),ZoomIn())
   return (
     <div className="home">
       <Header />
-      <ScrollContainer>
-        <ScrollPage page={0}>
-          <Animator animation={ZoomOut()}>
+      {/* <ScrollContainer> */}
+        {/* <ScrollPage page={0}> */}
+          {/* <Animator animation={ZoomOut()}> */}
             <Banner />
-          </Animator>
-        </ScrollPage>
-        <ScrollPage page={1}>
-         <Animator animation={ZoomInScrollOut}>
+          {/* </Animator> */}
+        {/* </ScrollPage> */}
+        {/* <ScrollPage page={1}> */}
+         {/* <Animator animation={ZoomInScrollOut}> */}
             <Showcase />
-         </Animator>
-        </ScrollPage>
-        <ScrollPage page={2}>
-          <Animator animation={FadeUp2}>
+         {/* </Animator> */}
+        {/* </ScrollPage> */}
+        {/* <ScrollPage page={2}> */}
+          {/* <Animator animation={ZoomInScrollOut}> */}
             <About />
-          </Animator>
-        </ScrollPage>
-        <ScrollPage page={3}>
-          <Animator animation={FadeUp}>
+          {/* </Animator> */}
+        {/* </ScrollPage> */}
+        {/* <ScrollPage page={3}> */}
+          {/* <Animator animation={FadeUp}> */}
             <Carouselimage />
-          </Animator>
-        </ScrollPage>
-      </ScrollContainer>
+          {/* </Animator> */}
+        {/* </ScrollPage> */}
+      {/* </ScrollContainer> */}
     </div>
   );
 }

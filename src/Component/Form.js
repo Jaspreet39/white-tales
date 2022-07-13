@@ -10,7 +10,7 @@ function Form() {
   const [mobile, setMobile] = useState();
   const [email, setEmail] = useState("");
   const [appintmentDate, setAppintmentDate] = useState();
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(false);
 
   const submit = async () => {
     // console.log(name);
@@ -28,10 +28,10 @@ function Form() {
         console.log(res.data.message);
         if (res.data.message === "Your Response Saved Successfully") {
           alert("Your requested have submitted");
-          setName('')
-          setAppintmentDate()
-          setEmail('')
-          setMobile()
+          setName("");
+          setAppintmentDate();
+          setEmail("");
+          setMobile();
         }
       } catch (err) {
         console.log(err);
@@ -50,23 +50,45 @@ function Form() {
       <div className="left">
         <h1>Book an Appointment</h1>
         <div className="inputs">
-          <div>
-            <input onChange={(e) => {setName(e.target.value)}} type="text" placeholder="Full Name" />
-
+          <div className="input">
+            <input
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+              type="text"
+              placeholder="Full Name"
+            />
           </div>
-          <div>
-            <input onChange={(e)=>{setMobile(e.target.value)}} type="text" placeholder="Mobile Number" />
+          <div className="input">
+            <input
+              onChange={(e) => {
+                setMobile(e.target.value);
+              }}
+              type="text"
+              placeholder="Mobile Number"
+            />
           </div>
-          <div>
-            <input onChange={(e)=>{setEmail(e.target.value)}} type="text" placeholder="Email Address" />
-
+          <div className="input">
+            <input
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              type="text"
+              placeholder="Email Address"
+            />
           </div>
-          <div>
-            <input onChange={(e)=>{setAppintmentDate(e.target.value)}} type="date" placeholder="Appointment Date" />
-            
-
+          <div className="input">
+            <input
+              onChange={(e) => {
+                setAppintmentDate(e.target.value);
+              }}
+              type="date"
+              placeholder="Appointment Date"
+            />
           </div>
-          <button disabled={error}  onClick={submit}>Book Now</button>
+          <button disabled={error} onClick={submit}>
+            Book Now
+          </button>
         </div>
       </div>
       <div className="right">

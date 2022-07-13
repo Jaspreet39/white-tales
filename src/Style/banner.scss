@@ -2,8 +2,6 @@
 
 .banner {
     margin: auto;
-    width: 100%;
-    @include flexbox(center);
 
     & .bannerImg {
         height: 90vh;

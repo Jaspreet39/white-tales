@@ -15,18 +15,26 @@
         font-size: 30px;
         color: $Title-color;
         font-weight: 400;
+        margin-bottom: 10px;
     }
 }
 
 .inputs{
     & input{
         padding: 10px 20px;
-        border-color: $Title-color;
-        margin-top: 10px;
+        border: none;
         min-width: 250px;
         outline-width: 0px;
-        border-radius: 10px;
         background: transparent;
+    }
+
+    & input::placeholder{
+        color: $Title-color;
+    }
+    & .input{
+        border: 1px solid $Title-color;
+        margin-bottom: 10px;
+        border-radius: 10px;
     }
 
     & p{

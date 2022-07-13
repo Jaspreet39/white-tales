@@ -3,9 +3,12 @@ import "../Style/carousel.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 function Carouselimage() {
   const width = window.innerWidth;
+  console.log(width, "width");
   const images = [
     {
       img: "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/18758374/2022/6/17/0abe0534-52a9-4cd5-9328-3bf44d7dfb871655452031998NecklaceandChains1.jpg",
@@ -33,30 +36,32 @@ function Carouselimage() {
     },
   ];
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: width > 500 ? 3 : 1,
-    slidesToScroll: width > 500 ? 3 : 1,
-  };
-
   console.log(width, "width");
   return (
     <div className="carousel">
-      <h1>Categories</h1>
-      <Slider {...settings}>
-        {images.map((item) => (
-          <div className="images">
-            <img
-              src={item.img}
-              alt=""
-              height="100%"
-              width="100%"
-            />
-          </div>
-        ))}
-      </Slider>
+      <h1>CATOGORIES</h1>
+      <div className="carouselContainer">
+        <Splide
+          style={{ marginRight: "20px", marginLeft: "20px" }}
+          onScroll={(item) => {
+            console.log(item, "scroll");
+          }}
+          options={{
+            perPage: width < 500 ? 1 : 4,
+            rewind: true,
+            width: "100%",
+            gap: "1rem",
+          }}
+        >
+          {images.map((item) => (
+            <SplideSlide style={{ width: "100%" }}>
+              <div className="images">
+                <img src={item.img} alt="" height="100%" width="100%" />
+              </div>
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 .header {
     @include flexbox(space-between);
-    padding: 20px;
+    padding: 20px 3%;
     & h1{
         font-size: 25px;
         font-weight: 600;
