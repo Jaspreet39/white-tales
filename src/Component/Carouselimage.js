@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Style/carousel.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import Aos from "aos";
+import 'aos/dist/aos.css'; 
 
 function Carouselimage() {
   const width = window.innerWidth;
@@ -37,8 +39,13 @@ function Carouselimage() {
   ];
 
   console.log(width, "width");
+
+  useEffect(()=>{
+    Aos.init({duration:2000})
+  },[])
+
   return (
-    <div className="carousel">
+    <div  className="carousel">
       <h1>CATOGORIES</h1>
       <div className="carouselContainer">
         <Splide
@@ -47,16 +54,17 @@ function Carouselimage() {
             console.log(item, "scroll");
           }}
           options={{
-            perPage: width < 500 ? 1 : 4,
+            arrows:width < 500 ? false : true,
+            perPage: width < 500 ? 2: 4,
             rewind: true,
             width: "100%",
-            gap: "1rem",
+            gap: width < 500 ? "6rem" : "-4rem",
           }}
         >
           {images.map((item) => (
             <SplideSlide style={{ width: "100%" }}>
-              <div className="images">
-                <img src={item.img} alt="" height="100%" width="100%" />
+              <div data-aos="fade-up" data-aos-delay={images.indexOf(item)*1000}  className="images">
+                <img onClick={() => console.log(images.indexOf(item), 'value')} src={item.img} alt="" height="100%" width="100%" />
               </div>
             </SplideSlide>
           ))}

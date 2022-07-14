@@ -2,7 +2,7 @@
 @import '../Style/mixin.scss';
 
 .carousel {
-   
+
     width: 100%;
     margin-top: 5%;
 
@@ -14,10 +14,11 @@
         margin-left: 12%;
         letter-spacing: 1.2px;
     }
-         & .carouselContainer {
-             width: 80%;
-             margin: auto;
-         }
+
+    & .carouselContainer {
+        width: 80%;
+        margin: auto;
+    }
 }
 
 
@@ -28,6 +29,7 @@
     border-radius: 20px;
     width: 300px;
     margin: auto;
+
     & img {
         border-radius: 20px;
     }
@@ -39,29 +41,36 @@
         & h1 {
             font-size: 20px;
         }
+
+        & .carouselContainer {
+            width: 100%;
+        }
     }
 
     .images {
-        height: 400px;
-        width: 400px;
+        height: 350px;
+        width: 220px;
     }
 
-   
+
 }
 
 @media screen and (max-width: 550px) {
     .carousel {
         & h1 {
             font-size: 20px;
-            margin-left: 10%;
+            margin: 2% 1%;
         }
+                & .carouselContainer {
+                    width: 100%;
+                }
     }
 
     .images {
-        height:200px;
-        width: 85%;
-        margin:auto;
+        height: 350px;
+        width: 220;
+        margin-left: 20%;
     }
 
-   
+
 }
