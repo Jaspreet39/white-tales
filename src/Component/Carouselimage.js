@@ -58,7 +58,7 @@ function Carouselimage() {
             perPage: width < 500 ? 2: 4,
             rewind: true,
             width: "100%",
-            gap: width < 500 ? "6rem" : "-4rem",
+            gap: width < 500 ? "6rem" : "2rem",
           }}
         >
           {images.map((item) => (
