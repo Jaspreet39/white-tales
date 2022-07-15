@@ -1,0 +1,91 @@
+ @import '../Style/Variable.scss';
+
+ .footer {
+     position: fixed;
+     bottom: -15px;
+     width: 100%;
+     z-index: 1;
+     display: none;
+ }
+
+ .modal {
+     backdrop-filter: blur(6px);
+     background: rgba(255, 255, 255, 0.25);
+     height: 80%;
+     position: relative;
+
+     & button {
+         position: absolute;
+         bottom: -24%;
+         left: 5%;
+         font-size: 20px;
+         width: 90%;
+         padding: 15px 25px;
+         color: #fff;
+         background-color: $Title-color;
+         border-radius: 10px;
+         font-size: 15px;
+         border: none;
+         z-index: 1;
+         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+     }
+
+     & .modalHeader{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+     }
+
+     & h1 {
+         font-size: 35px;
+         font-weight: 500;
+         color: #111;
+     }
+
+     & .modalInputs {
+         width: 80%;
+         margin: 10px 5%;
+
+         & input {
+             background-color: #fff;
+             width: 100%;
+             padding: 20px;
+             border-radius: 10px;
+             margin-bottom: 20px;
+             border: none;
+         }
+     }
+
+     & .modalHeader {
+         padding: 10px 20px 0 20px;
+
+
+         & h1 {}
+     }
+ }
+
+ .button {
+     font-size: 20px;
+     width: 90%;
+     padding: 15px 25px;
+     color: #fff;
+     background-color: $Title-color;
+     border-radius: 10px;
+     font-size: 15px;
+     border: none;
+     z-index: 1;
+     margin: 5% 5%;
+     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+ }
+
+ @media screen and (max-width: 450px) {
+     .footer {
+         display: inline;
+     }
+ }
+
+ @media screen and (max-width: 550px) {
+     .footer {
+         display: inline;
+     }
+ }

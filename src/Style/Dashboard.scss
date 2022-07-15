@@ -1,0 +1,13 @@
+@import '../Style//Variable.scss';
+
+.dashbaordHeader{
+    background-color: #AC8735;
+}
+.dasboardBody{
+    background-color: $brand-color;
+    height: 100%;
+}
+
+.Drawer{
+    background-color: red !important;
+}

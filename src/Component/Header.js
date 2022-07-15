@@ -6,7 +6,9 @@ function Header() {
     <div className="header">
       <div className="first"></div>
       <h1>WHITE TALES</h1>
-      <p>Book an Appointment</p>
+      <a href="#form">
+        <p>Book an Appointment</p>
+      </a>
     </div>
   );
 }

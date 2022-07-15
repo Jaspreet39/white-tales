@@ -14,6 +14,8 @@ function Showcase() {
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
       const y = (window.pageYOffset / 3)/2;
+      console.log(window.innerHeight,'height')
+      console.log(y,'yyyy')
       const y2 = (window.pageYOffset / 3)/2;
       gsap.to('.showcaseLowerRightsecondImage',{bottom:y2*2.6-225, x:0, duration:1})
       gsap.to('.secondImg', { top: -y + 100, x: 0, duration: 1 })

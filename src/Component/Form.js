@@ -46,7 +46,7 @@ function Form() {
   // }, [name , email , mobile , appintmentDate])
 
   return (
-    <div className="form">
+    <div id="form" className="form">
       <div className="left">
         <h1>Book an Appointment</h1>
         <div className="inputs">
