@@ -2,7 +2,7 @@
 
  .footer {
      position: fixed;
-     bottom: -15px;
+     bottom: 0;
      width: 100%;
      z-index: 1;
      display: none;
@@ -16,7 +16,7 @@
 
      & button {
          position: absolute;
-         bottom: -24%;
+         bottom: -22%;
          left: 5%;
          font-size: 20px;
          width: 90%;

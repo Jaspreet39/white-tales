@@ -91,6 +91,7 @@
             flex-direction: column;
         }
         .right{
+            padding-bottom: 50px;
             & img{
                 height: 100%;
                 width: 100%;
@@ -101,14 +102,24 @@
             display: none;
         }
 }
+@media screen and (max-width: 750px){
+    .form {
+            @include flexbox(center);
+            flex-direction: column-reverse;
+        }
+}
 
 @media screen and (max-width: 550px) {
     .form {
         @include flexbox(center);
         flex-direction: column;
     }
+         .left {
+             display: none;
+         }
 
     .right {
+        padding-bottom: 50px;
         & img {
             height: 100%;
             width: 100%;

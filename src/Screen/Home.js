@@ -49,6 +49,7 @@ function Home() {
         {/* <ScrollPage page={3}> */}
           {/* <Animator animation={FadeUp}> */}
             <Carouselimage />
+            
           {/* </Animator> */}
         {/* </ScrollPage> */}
       {/* </ScrollContainer> */}
