@@ -2,8 +2,15 @@ import logo from "../assets/images/logo_small3.png";
 import React, { useEffect, useState } from "react";
 import "../Style/Form.scss";
 import axios from "axios";
+import Aos from "aos";
+import 'aos/dist/aos.css'; 
 
 function Form() {
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
+
   const host = "https://whitetales.herokuapp.com";
 
   const [name, setName] = useState("");
@@ -47,7 +54,7 @@ function Form() {
 
   return (
     <div id="form" className="form">
-      <div className="left">
+      <div data-aos="fade-right" className="left">
         <h1>Book an Appointment</h1>
         <div className="inputs">
           <div className="input">
@@ -91,7 +98,7 @@ function Form() {
           </button>
         </div>
       </div>
-      <div className="right">
+      <div data-aos="fade-right" className="right">
         <div style={{ height: "250px", width: "250px" }}>
           <img src={logo} alt="" height="100%" width="100%" />
         </div>
