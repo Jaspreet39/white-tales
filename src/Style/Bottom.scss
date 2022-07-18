@@ -3,12 +3,12 @@
 .bottom{
     background-color: $Desc-color;
     padding-bottom: 5%;
-    margin-top: -2%;
+    margin-top: -5%;
 }
 
 @media screen and (max-width: 450px) {
    .bottom{
-    // margin-top: -80%;
+    margin-top: -5%;
    }
 }
 

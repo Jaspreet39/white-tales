@@ -1,15 +1,37 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect, useRef, useState } from "react";
 import "../Style/Header.scss"
+import Banner from "./Banner";
 
 function Header() {
+
+  let app = useRef(null)
+
+  const [scroll, setScroll] = useState();
+  useEffect(() => {
+    gsap.to(".header", { position:'Sticky', x: 0, duration: 5, delay: 0.5 });
+    gsap.to(".bannerImg", { height:'90vh',width:'96%',marginLeft:'2%', x: 0, duration: 1, delay: 0.5 });
+  }, [])
   return (
-    <div className="header">
-      <div className="first"></div>
-      <h1>WHITE TALES</h1>
-      <a href="#form">
-        <p>Book an Appointment</p>
-      </a>
-    </div>
+   <div className="headerMain">
+      <div className="header">
+        <div className="first"></div>
+        <h1>WHITE TALES</h1>
+        <a href="#form">
+          <p>Book an Appointment</p>
+        </a>
+      </div>
+      <div className="banner" >
+        <div className="bannerImg" ref={e => app = e}>
+          <img
+            src="https://images.indianexpress.com/2021/05/gold-jewellery_1200-Copy.jpg"
+            alt=""
+            width="100%"
+            height="100%"
+          />
+        </div>
+      </div>
+   </div>
   );
 }
 

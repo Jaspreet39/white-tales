@@ -44,7 +44,12 @@ function BottomTop() {
                   <br /> quam. Curabitur quis bibendum augue.
               </p>
           </div>
-      <div data-aos="fade-up" className="bottomRight"></div>
+      <img className='bottomRight'
+        src="https://images.indianexpress.com/2021/05/gold-jewellery_1200-Copy.jpg"
+        alt=""
+        width="100%"
+        height="100%"
+      />
     </div>
   )
 }

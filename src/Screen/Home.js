@@ -33,7 +33,7 @@ function Home() {
       {/* <ScrollContainer> */}
         {/* <ScrollPage page={0}> */}
           {/* <Animator animation={ZoomOut()}> */}
-            <Banner />
+            {/* <Banner /> */}
           {/* </Animator> */}
         {/* </ScrollPage> */}
         {/* <ScrollPage page={1}> */}
