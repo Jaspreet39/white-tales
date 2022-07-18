@@ -10,6 +10,7 @@ function Header() {
   const [scroll, setScroll] = useState();
   useEffect(() => {
     gsap.to(".header", { position:'Sticky', x: 0, duration: 5, delay: 0.5 });
+    gsap.to(".image ", { borderRadius:15, x: 0, duration:1, delay: 0.5 });
     gsap.to(".bannerImg", { height:'90vh',width:'96%',marginLeft:'2%', x: 0, duration: 1, delay: 0.5 });
   }, [])
   return (
@@ -24,6 +25,7 @@ function Header() {
       <div className="banner" >
         <div className="bannerImg" ref={e => app = e}>
           <img
+          className="image"
             src="https://images.indianexpress.com/2021/05/gold-jewellery_1200-Copy.jpg"
             alt=""
             width="100%"
