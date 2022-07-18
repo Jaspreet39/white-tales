@@ -23,11 +23,12 @@
 }
 
 .bottomRight {
-    background-color: #BDBDBD;
+    background-size: cover;
     width: 80%;
-    height: 60vh;
+    height: 70vh;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    margin-top: -2%;
 }
 
 @media screen and (max-width: 450px) {

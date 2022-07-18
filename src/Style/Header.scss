@@ -1,8 +1,15 @@
 @import '../Style/mixin.scss';
 
+.headerMain{
+    position: relative;
+}
+
 .header {
     @include flexbox(space-between);
-    padding: 20px 3%;
+    position: absolute;
+    width: 95%; 
+    padding: 20px 0%;
+    // z-index: 100;
     & h1{
         font-size: 25px;
         font-weight: 600;
