@@ -21,27 +21,27 @@ function BottomTop() {
               </h1>
               <p>
                   Lorem ipsum dolor sit amet, consectetur
-                  <br />
+                 
                   adipiscing elit. Suspendisse mauris eros,
-                  <br /> iaculis placerat purus sed, euismod luctus
-                  <br />
+                  iaculis placerat purus sed, euismod luctus
+                 
                   quam. Curabitur quis bibendum augue.
-                  <br />
+                 
                   Nam convallis blandit sapien in molestie.
-                  <br />
+                 
                   Lorem ipsum dolor sit amet, consectetur
-                  <br />
+                 
                   adipiscing elit. Suspendisse mauris eros,
-                  <br />
+                 
                   iaculis placerat purus sed, euismod luctus
-                  <br /> quam. Curabitur quis bibendum augue.
-                  <br />
+                  quam. Curabitur quis bibendum augue.
+                 
                   Lorem ipsum dolor sit amet, consectetur
-                  <br />
+                 
                   adipiscing elit. Suspendisse mauris eros,
-                  <br />
+                 
                   iaculis placerat purus sed, euismod luctus
-                  <br /> quam. Curabitur quis bibendum augue.
+                  quam. Curabitur quis bibendum augue.
               </p>
           </div>
       <div data-aos="fade-up" className="bottomRight"></div>

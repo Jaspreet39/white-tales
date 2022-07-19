@@ -2,7 +2,7 @@
 @import '../Style/Variable.scss';
 
 .about {
-    width: 98%;
+    width: 97%;
     background: linear-gradient(90deg, #D9D9D9 50%, #C7A55B 50%);
     height: 85vh;
     @include flexbox(center);
@@ -22,7 +22,7 @@
             background-color: #BDBDBD;
             position: absolute;
             bottom: -30px;
-            right: -30px;
+            right: -3%;
             border-radius: 20px;
             z-index: 0;
 

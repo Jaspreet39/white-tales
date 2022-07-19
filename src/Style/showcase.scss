@@ -9,7 +9,6 @@
 
 .showcase {
     margin-top: 5%;
-    padding-right: 20px;
     padding-bottom: 5%;
     height: 85vh
 }
@@ -84,9 +83,9 @@
 .showcaseLowerRight {
     @include flexbox(center);
     position: relative;
-    margin-top: -10%;
-    height: 650px;
-    width: 650px;
+    min-width: 35%;
+    height: 600px;
+    width: 600px;
     position: relative;
     background-image: url('../assets/images/logo_small3.png');
     background-position: center;

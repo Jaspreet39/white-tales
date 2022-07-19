@@ -23,8 +23,10 @@
         position: absolute;
         color: #fff;
         font-size: 11px;
-        top: 40%;
-        left: 7.5%;
+        top: 43%;
+        left: 7%;
+        max-width: 14%;
+        text-align: justify;
     }
 }
 
@@ -61,7 +63,7 @@
         & p {
             font-size: 9px;
             top: 20%;
-            width: 25%;
+            max-width: 25%;
             text-align: justify;
         }
     }

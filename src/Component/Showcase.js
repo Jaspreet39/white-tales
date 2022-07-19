@@ -89,22 +89,24 @@ function Showcase() {
             <br /> mauris eros, iaculis placerat purus sed, euismod luctus quam.
           </p>
         </div>
-        <div className="showcaseLowerRight">
-          <div className="showcaseLowerRightfirstImg">
-            <img
-              src="https://i.pinimg.com/736x/bf/3c/b7/bf3cb7caebd74e54b5e04869870d94bd--gold-jewellery-jewellery-designs.jpg"
-              alt=""
-              height="100%"
-              width="100%"
-            />
-          </div>
-          <div className="showcaseLowerRightsecondImage">
-            <img
-              src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/18758374/2022/6/17/0abe0534-52a9-4cd5-9328-3bf44d7dfb871655452031998NecklaceandChains1.jpg"
-              alt=""
-              height="100%"
-              width="100%"
-            />
+        <div className="lower">
+          <div className="showcaseLowerRight">
+            <div className="showcaseLowerRightfirstImg">
+              <img
+                src="https://i.pinimg.com/736x/bf/3c/b7/bf3cb7caebd74e54b5e04869870d94bd--gold-jewellery-jewellery-designs.jpg"
+                alt=""
+                height="100%"
+                width="100%"
+              />
+            </div>
+            <div className="showcaseLowerRightsecondImage">
+              <img
+                src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/18758374/2022/6/17/0abe0534-52a9-4cd5-9328-3bf44d7dfb871655452031998NecklaceandChains1.jpg"
+                alt=""
+                height="100%"
+                width="100%"
+              />
+            </div>
           </div>
         </div>
       </div>
