@@ -28,6 +28,9 @@ function Carouselimage() {
     {
       img: img4,
     },
+    {
+      img: img2,
+    },
   ];
 
   console.log(width, "width");
@@ -55,7 +58,7 @@ function Carouselimage() {
         >
           {images.map((item) => (
             <SplideSlide style={{ width: "100%" }}>
-              <div data-aos="fade-up" data-aos-delay={images.indexOf(item)*1000}  className="images">
+              <div data-aos="fade-up"   className="images">
                 <img onClick={() => console.log(images.indexOf(item), 'value')} src={item.img} alt="" height="100%" width="100%" />
               </div>
             </SplideSlide>

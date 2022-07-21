@@ -11,7 +11,7 @@ function BottomTop() {
 
   return (
     <div className="bottomTop">
-      <div className="bottomLeft">
+      <div data-aos="fade-right" className="bottomLeft">
         <h1>
           ABOUT
           <br />

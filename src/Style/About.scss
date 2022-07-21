@@ -3,7 +3,7 @@
 
 .about {
     width: 96%;
-    background: linear-gradient(90deg, #D9D9D9 50%, $Desc-color 50%);
+    background: linear-gradient(90deg, #D9D9D9 50%, $Desc-color 50%), url('../assets//images/SixthImage.png');
     height: 85vh;
     @include flexbox(center);
     // border-top-right-radius: 20px;
