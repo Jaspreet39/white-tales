@@ -204,7 +204,7 @@
         padding-left: 2%;
         @include flexbox(center);
         flex-direction: column;
-        margin-top: -30%;
+        // margin-top: -30%;
     }
 
     .showcaseUpperTitle {
@@ -283,7 +283,7 @@
     .showcase {
         @include flexbox(center);
         flex-direction: column;
-        margin-top: -40%;
+        margin-top: -30%;
     }
 
     .showcaseUpperTitle {
