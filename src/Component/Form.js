@@ -53,65 +53,67 @@ function Form() {
   // }, [name , email , mobile , appintmentDate])
 
   return (
-    <div id="form" className="form">
-      <div data-aos="fade-right" className="left">
-        <h1>Book an Appointment</h1>
-        <div className="inputs">
-          <div className="input">
-            <input
-              onChange={(e) => {
-                setName(e.target.value);
-              }}
-              type="text"
-              placeholder="Full Name"
-            />
+    <div className="main">
+      <div id="form" className="form">
+        <div data-aos="fade-right" className="left">
+          <h1>Book an Appointment</h1>
+          <div className="inputs">
+            <div className="input">
+              <input
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
+                type="text"
+                placeholder="Full Name"
+              />
+            </div>
+            <div className="input">
+              <input
+                onChange={(e) => {
+                  setMobile(e.target.value);
+                }}
+                type="text"
+                placeholder="Mobile Number"
+              />
+            </div>
+            <div className="input">
+              <input
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                type="text"
+                placeholder="Email Address"
+              />
+            </div>
+            <div className="input">
+              <input
+                onChange={(e) => {
+                  setAppintmentDate(e.target.value);
+                }}
+                type="date"
+                placeholder="Appointment Date"
+              />
+            </div>
+            <button disabled={error} onClick={submit}>
+              Book Now
+            </button>
           </div>
-          <div className="input">
-            <input
-              onChange={(e) => {
-                setMobile(e.target.value);
-              }}
-              type="text"
-              placeholder="Mobile Number"
-            />
-          </div>
-          <div className="input">
-            <input
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-              type="text"
-              placeholder="Email Address"
-            />
-          </div>
-          <div className="input">
-            <input
-              onChange={(e) => {
-                setAppintmentDate(e.target.value);
-              }}
-              type="date"
-              placeholder="Appointment Date"
-            />
-          </div>
-          <button disabled={error} onClick={submit}>
-            Book Now
-          </button>
         </div>
-      </div>
-      <div data-aos="fade-right" className="right">
-        <div style={{ height: "250px", width: "250px" }}>
-          <img src={logo} alt="" height="100%" width="100%" />
+        <div data-aos="fade-right" className="right">
+          <div style={{ height: "250px", width: "250px" }}>
+            <img src={logo} alt="" height="100%" width="100%" />
+          </div>
+          <h1>WHITE TALES</h1>
+          <h3>
+            Address Line 1, Area, City
+            <br />
+            State - PinCode
+            <br />
+            +91-0000000000
+            <br />
+            info@whitetales.com
+          </h3>
         </div>
-        <h1>WHITE TALES</h1>
-        <h3>
-          Address Line 1, Area, City
-          <br />
-          State - PinCode
-          <br />
-          +91-0000000000
-          <br />
-          info@whitetales.com
-        </h3>
       </div>
     </div>
   );

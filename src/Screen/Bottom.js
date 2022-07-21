@@ -7,7 +7,7 @@ function Bottom() {
   return (
     <div className="bottom">
       <BottomTop/>
-      <Form/>
+      {/* <Form/> */}
     </div>
   );
 }

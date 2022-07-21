@@ -1,11 +1,14 @@
 @import '../Style/mixin.scss';
 @import '../Style/Variable.scss';
 
+
+.main{
+    background-color: $Desc-color;
+    padding: 3%
+}
 .form{
     @include flexbox(space-between);
-    margin:0  5% ;
-    margin-top:5%;
-    background-color: #FFFBEB;
+    background-color: #FFF;
     padding: 5% 10%;
     border-radius: 20px;
 }

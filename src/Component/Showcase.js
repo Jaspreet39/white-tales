@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import "../Style/showcase.scss";
 import gsap from "gsap";
 import { useState } from "react";
+import img1 from '../assets/images/FirstImage.png'
+import img2 from '../assets/images/secondImage.png'
+import img3 from '../assets/images/ThirdImage.png'
+import img4 from '../assets/images/FourthImage.png'
 
 function Showcase() {
   const [scroll, setScroll] = useState();
@@ -47,7 +51,7 @@ function Showcase() {
         <div className="showcaseImage">
           <div className="firstImg">
             <img
-              src="https://i.pinimg.com/736x/bf/3c/b7/bf3cb7caebd74e54b5e04869870d94bd--gold-jewellery-jewellery-designs.jpg"
+              src={img2}
               alt=""
               height="100%"
               width="100%"
@@ -55,7 +59,7 @@ function Showcase() {
           </div>
           <div className="secondImg">
             <img
-              src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/18758374/2022/6/17/0abe0534-52a9-4cd5-9328-3bf44d7dfb871655452031998NecklaceandChains1.jpg"
+              src={img1}
               alt=""
               height="100%"
               width="100%"
@@ -93,7 +97,7 @@ function Showcase() {
           <div className="showcaseLowerRight">
             <div className="showcaseLowerRightfirstImg">
               <img
-                src="https://i.pinimg.com/736x/bf/3c/b7/bf3cb7caebd74e54b5e04869870d94bd--gold-jewellery-jewellery-designs.jpg"
+                src={img4}
                 alt=""
                 height="100%"
                 width="100%"
@@ -101,7 +105,7 @@ function Showcase() {
             </div>
             <div className="showcaseLowerRightsecondImage">
               <img
-                src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/18758374/2022/6/17/0abe0534-52a9-4cd5-9328-3bf44d7dfb871655452031998NecklaceandChains1.jpg"
+                src={img3}
                 alt=""
                 height="100%"
                 width="100%"

@@ -2,6 +2,7 @@ import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
 import "../Style/Header.scss"
 import Banner from "./Banner";
+import Video from '../assets/Video/bannerVideo.mp4'
 
 function Header() {
 
@@ -24,13 +25,9 @@ function Header() {
       </div>
       <div className="banner" >
         <div className="bannerImg" ref={e => app = e}>
-          <img
-          className="image"
-            src="https://images.indianexpress.com/2021/05/gold-jewellery_1200-Copy.jpg"
-            alt=""
-            width="100%"
-            height="100%"
-          />
+          <video loop width="100%" height="100%" autoPlay controls>
+            <source src={Video} type="video/mp4" />
+          </video>
         </div>
       </div>
    </div>

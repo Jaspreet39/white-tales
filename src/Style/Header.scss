@@ -1,4 +1,5 @@
 @import '../Style/mixin.scss';
+@import '../Style/Variable.scss';
 
 .headerMain{
     position: relative;
@@ -8,13 +9,13 @@
     @include flexbox(space-between);
     position: absolute;
     width: 98%; 
-    padding: 20px 0%;
+    padding: 10px 0%;
     // z-index: 100;
     & h1{
         font-size: 25px;
         font-weight: 600;
         font-style: sens-serif;
-        color: #968255;
+        color: $Title-color;
         margin-left: 5%;
     }
 
@@ -25,7 +26,7 @@
     & p{
         font-size: 14px;
         font-weight: 400;
-        color: #AC8735;
+        color: $Desc-color;
     }
 
     & p:hover{
