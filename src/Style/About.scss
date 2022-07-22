@@ -3,17 +3,35 @@
 
 .about {
     width: 96%;
-    background: linear-gradient(90deg, #D9D9D9 50%, $Desc-color 50%), url('../assets//images/SixthImage.png');
+    display: flex;
+    align-items: center;
+    // background: linear-gradient(90deg, #D9D9D9 50%, $Desc-color 50%), url('../assets//images/SixthImage.png');
     height: 85vh;
-    @include flexbox(center);
-    // border-top-right-radius: 20px;
-    // border-bottom-right-radius: 20px;
-    // border-radius: 30px;
+    // @include flexbox(center);
+    // // border-top-right-radius: 20px;
+    // // border-bottom-right-radius: 20px;
+    // // border-radius: 30px;
     position: relative;
-    // background-image: url('../assets/images/SixthImage.png');
-    // background-position: -50px  0;
-    background-repeat: no-repeat;
-    background-size: auto;
+    // // background-image: url('../assets/images/SixthImage.png');
+    // // background-position: -50px  0;
+    // background-repeat: no-repeat;
+    // background-size: auto;
+    // border-top-right-radius: 20px;
+
+    & .firstBackBox {
+        height: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url('../assets/images/SixthImage.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 45%;
+    }
+        & .secondBackBox {
+            height: 100%;
+            background-color: $Desc-color;
+            width: 55%;
+            border-top-right-radius: 20px;
+        }
 
 
     & .aboutContainer {
@@ -21,21 +39,22 @@
         @include flexbox(center);
         flex-direction: column;
         z-index: 1;
+        position: absolute;
 
-        & .box {
-            height: 300px;
-            width: 220px;
-            background-color: transparent;
-            position: absolute;
-            bottom: -30px;
-            right: -2.5%;
+    }
+     .box {
+        height: 350px;
+        width: 270px;
+        background-color: transparent;
+        position: absolute;
+        bottom: -40px;
+        right: -2.6%;
+        border-radius: 20px;
+        z-index: 0;
+
+        & img{
             border-radius: 20px;
-            z-index: 0;
-
-            & img{
-                border-radius: 20px;
-                object-fit: cover;
-            }
+            object-fit: cover;
         }
     }
 
@@ -65,12 +84,12 @@
             width: 100%;
             margin-top: -25%;
 
-            & .box {
-                    height: 180px;
-                    width: 150px;
-                    right: -7%;
-                }
         }
+        .box {
+                height: 180px;
+                width: 150px;
+                right: -7%;
+            }
 
         & h1 {
             font-size: 20px;
@@ -94,12 +113,12 @@
         & .aboutContainer {
             width: 100%;
             margin-top: -25%;
-            & .box {
-                    height: 150px;
-                    width: 120px;
-                    right: -7%;
-                }
         }
+        .box {
+               height: 150px;
+               width: 120px;
+               right: -7%;
+           }
 
         & h1 {
             font-size: 20px;

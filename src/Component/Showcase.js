@@ -26,24 +26,24 @@ function Showcase() {
     });
   }, []);
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 500) {
-        gsap.to('.upperTitle, .lowerTitle',{display:'flex', y:0, dela:0})
-      } else {
-        gsap.to('.upperTitle, .lowerTitle', { display: 'none', y: 0, dela: 0 })
-      }
-    });
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     if (window.scrollY > 500) {
+  //       gsap.to('.upperTitle, .lowerTitle',{display:'flex', y:0, dela:0})
+  //     } else {
+  //       gsap.to('.upperTitle, .lowerTitle', { display: 'none', y: 0, dela: 0 })
+  //     }
+  //   });
 
-    return () => window.removeEventListener("scroll", () => {
-      if (window.scrollY > 500) {
-        gsap.to('.upperTitle', { display: 'flex', y: 0, dela: 0 })
-      } else {
-        gsap.to('.upperTitle', { display: 'none', y: 0, dela: 0 })
-      }
-    });
+  //   return () => window.removeEventListener("scroll", () => {
+  //     if (window.scrollY > 500) {
+  //       gsap.to('.upperTitle', { display: 'flex', y: 0, dela: 0 })
+  //     } else {
+  //       gsap.to('.upperTitle', { display: 'none', y: 0, dela: 0 })
+  //     }
+  //   });
 
-  }, [])
+  // }, [])
 
   return (
     <div className="showcase" id="scrollDemo">

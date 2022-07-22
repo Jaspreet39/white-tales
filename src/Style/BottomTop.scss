@@ -7,8 +7,12 @@
     align-items: flex-start;
     justify-content: flex-end;
     padding-top: 5%;
-    padding-left: 2%;
+    padding-left: 10%;
     // position: relative;
+
+    .bottomLeft{
+        // margin-left: 2%;
+    }
 
     & h1 {
         color: #fff;
@@ -26,6 +30,7 @@
         font-size: 11px;
         max-width: 80%;
         text-align: justify;
+        opacity: 0.6;
     }
 }
 
@@ -41,19 +46,27 @@
     .bottomLeft{
         & h1{
             font-size: 20px;
+            margin-left: 5px;
         }
 
         & p{
             font-size: 9px;
+            margin-top: 2%;
+            margin-bottom: 5%;
         }
     }
 
     .bottomRight{
         height: 400px;
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 550px) {
+    .bottomTop{
+        padding: 0% 2%;
+        flex-direction: column;
+    }
     .bottomLeft {
         & h1 {
             font-size: 12px;
@@ -70,6 +83,6 @@
 
     .bottomRight {
         height: 400px;
-        width: 68%;
+        width: 100%;
     }
 }

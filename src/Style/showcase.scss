@@ -9,20 +9,21 @@
 
 .showcase {
     margin-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
     height: 85vh
 }
 
 .showcaseUpper {
     @include flexbox(space-between);
     padding: 0 5%;
+    margin-left: 5%;
 }
 
 .showcaseImage {
     position: relative;
 
     & .firstImg {
-        @include image(200px,300px, #BDBDBD);
+        @include image(250px,370px, #BDBDBD);
         border-radius: 20px;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 
@@ -33,7 +34,7 @@
 
     & .secondImg {
         position: absolute;
-        @include image(270px,200px, #BDBDBD);
+        @include image(320px,220px, #BDBDBD);
         border-radius: 20px;
         top: -10%;
         left: 30%;
@@ -58,17 +59,17 @@
         font-size: 40px;
         font-weight: 400;
         color: $Title-color;
-        display: none;
 
     }
 
     & p {
         color: $Desc-color;
         margin-top: 20px;
+        opacity: 0.6;
     }
 }
 .showcaseUpperTitle{
-    margin-right: 20%;
+    // margin-right: 10%;   
 }
 
 .showcaseLower {
@@ -93,7 +94,7 @@
     margin-top: 20px;
     // padding-right: 50px;
     & .showcaseLowerRightfirstImg {
-        @include image(200px, 300px, #D9D9D9);
+        @include image(250px,370px, #D9D9D9);
         border-radius: 20px;
         // transform: rotate(90deg);
         margin-left: 15%;
@@ -105,7 +106,7 @@
     }
 
     & .showcaseLowerRightsecondImage {
-        @include image(270px, 200px, #BDBDBD);
+        @include image(320px,220px, #BDBDBD);
         border-radius: 20px;
         position: absolute;
         left: 20%;
@@ -284,6 +285,7 @@
         @include flexbox(center);
         flex-direction: column;
         margin-top: -30%;
+        padding-bottom: 0%;
     }
 
     .showcaseUpperTitle {

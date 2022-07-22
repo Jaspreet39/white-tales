@@ -41,19 +41,19 @@ function Carouselimage() {
 
   return (
     <div  className="carousel">
-      <h1>CATOGORIES</h1>
+      <h1>CATAGORIES</h1>
       <div className="carouselContainer">
         <Splide
-          style={{ marginRight: "20px", marginLeft: "20px" }}
+          // style={{ marginRight: "20px", marginLeft: "20px" }}
           onScroll={(item) => {
             console.log(item, "scroll");
           }}
           options={{
-            arrows:width < 500 ? false : true,
-            perPage: width < 500 ? 2: 4,
+            arrows: true,
+            perPage: width < 500 ? 1: 4,
             rewind: true,
             width: "100%",
-            gap: width < 500 ? "6rem" : "2rem",
+            gap: width < 500 ? "3rem" : "2rem",
           }}
         >
           {images.map((item) => (

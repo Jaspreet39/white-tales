@@ -10,9 +10,9 @@ function Header() {
 
   const [scroll, setScroll] = useState();
   useEffect(() => {
-    gsap.to(".header", { position:'Sticky', x: 0, duration: 5, delay: 0.5 });
-    gsap.to(".image ", { borderRadius:15, x: 0, duration:1, delay: 0.5 });
-    gsap.to(".bannerImg", { height:'90vh',width:'96%',marginLeft:'2%', x: 0, duration: 1, delay: 0.5 });
+    // gsap.to(".header", { position:'Sticky', x: 0, duration: 5, delay: 0.5 });
+    // gsap.to(".image ", { borderRadius:15, x: 0, duration:1, delay: 0.5 });
+    // gsap.to(".bannerImg", { height:'90vh',width:'96%',marginLeft:'2%', x: 0, duration: 1, delay: 0.5 });
   }, [])
   return (
    <div className="headerMain">

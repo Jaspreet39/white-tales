@@ -2,19 +2,20 @@
 @import '../Style/Variable.scss';
 
 
-.main{
+.main {
     background-color: $Desc-color;
     padding: 3%
 }
-.form{
+
+.form {
     @include flexbox(space-between);
     background-color: #FFF;
     padding: 5% 10%;
     border-radius: 20px;
 }
 
-.left{
-    & h1{
+.left {
+    & h1 {
         font-size: 30px;
         color: $Title-color;
         font-weight: 400;
@@ -22,37 +23,42 @@
     }
 }
 
-.inputs{
-    & input{
+.inputs {
+    & input {
         padding: 10px 20px;
         border: none;
         min-width: 250px;
         outline-width: 0px;
         background: transparent;
+        color: $Title-color;
+        opacity: 0.6;
     }
 
-    & input::placeholder{
+    & input::placeholder {
         color: $Title-color;
+        // opacity: 0.6;
     }
-    & .input{
+
+    & .input {
         border: 1px solid $Title-color;
         margin-bottom: 10px;
         border-radius: 10px;
     }
 
-    & p{
-        color: red;
+
+
+    & p {
         font-size: 11px;
         font-weight: 500;
     }
 
-    & button:hover{
+    & button:hover {
         // letter-spacing: 0.5px;
         cursor: pointer;
         background-color: $Desc-color;
     }
 
-    & button{
+    & button {
         padding: 7px 25px;
         margin-top: 20px;
         color: #fff;
@@ -67,49 +73,73 @@
     color: red !important;
 }
 
-.right{
+.right {
     align-items: center;
     flex-direction: column;
 
-    & h1{
+    & h1 {
         font-size: 35px;
         color: $Title-color;
         font-weight: 400;
         margin-left: 20px;
     }
 
-    & h3{
+    & h3 {
         color: $Desc-color;
         font-size: 13px;
         font-weight: 400;
-        // margin-left: 20%;
-        text-align: left;
-        margin-left: 40%;
+        opacity: 0.6;
+        background-color: white;
+        margin-left: 2%;
+    }
+
+    .basicInfo {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-left: 10%;
+    }
+
+    .infoContainer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2%;
+
+        & .MuiSvgIcon-root {
+            color: $Title-color;
+            opacity: 0.6;
+            font-size: 18px;
+        }
     }
 }
 
 @media screen and (max-width: 450px) {
     .form {
-            @include flexbox(center);
-            flex-direction: column;
-        }
-        .right{
-            padding-bottom: 50px;
-            & img{
-                height: 100%;
-                width: 100%;
-            }
-        }
+        @include flexbox(center);
+        flex-direction: column;
+    }
 
-        .left{
-            display: none;
+    .right {
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & img {
+            height: 100%;
+            width: 100%;
         }
+    }
+
+    .left {
+        display: none;
+    }
 }
-@media screen and (max-width: 750px){
+
+@media screen and (max-width: 750px) {
     .form {
-            @include flexbox(center);
-            flex-direction: column-reverse;
-        }
+        @include flexbox(center);
+        flex-direction: column-reverse;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -117,12 +147,18 @@
         @include flexbox(center);
         flex-direction: column;
     }
-         .left {
-             display: none;
-         }
+
+    .left {
+        display: none;
+    }
 
     .right {
         padding-bottom: 50px;
+
+        & h3 {
+            margin-left: 0%;
+        }
+
         & img {
             height: 100%;
             width: 100%;
