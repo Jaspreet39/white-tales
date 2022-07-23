@@ -5,6 +5,7 @@
     width: 96%;
     display: flex;
     align-items: center;
+    margin-top: -2%;
     // background: linear-gradient(90deg, #D9D9D9 50%, $Desc-color 50%), url('../assets//images/SixthImage.png');
     height: 85vh;
     // @include flexbox(center);
@@ -28,7 +29,7 @@
     }
         & .secondBackBox {
             height: 100%;
-            background-color: $Desc-color;
+            background-color: #85DCD4;
             width: 55%;
             border-top-right-radius: 20px;
         }
@@ -62,6 +63,7 @@
         font-size: 60px;
         font-weight: 300;
         color: #fff;
+        margin-right: 10%;
     }
 
     & p {
@@ -108,7 +110,7 @@
         width: 92% !important;
         height: 30vh;
         padding: 0%;
-        margin-top: -40%;
+        margin-top: -55%;
 
         & .aboutContainer {
             width: 100%;

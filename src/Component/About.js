@@ -29,7 +29,7 @@ function About() {
       <div className="secondBackBox"></div>
       <div className="aboutContainer">
         <h1 data-aos="fade-up">
-          Inspired from the <br />
+          Inspired by <br />
           Nature.
         </h1>
         <p data-aos="fade-up">

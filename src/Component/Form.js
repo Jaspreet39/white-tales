@@ -109,12 +109,12 @@ function Form() {
           <div className="basicInfo">
             <div className="infoContainer">
               <LocationOnIcon />
-              <h3>Address Line 1, Area, City</h3>
+              <h3>Address Line 1, Area, City <br />State - PinCode</h3>
             </div>
-            <div className="infoContainer">
+            {/* <div className="infoContainer" style={{marginLeft:'20px'}}>
               <LocationOnIcon />
               <h3>State - PinCode</h3>
-            </div>
+            </div> */}
             <div className="infoContainer">
               <LocalPhoneIcon />
               <h3>+91-0000000000</h3>

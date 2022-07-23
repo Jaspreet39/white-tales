@@ -51,9 +51,9 @@ function Carouselimage() {
           options={{
             arrows: true,
             perPage: width < 500 ? 1: 4,
-            rewind: true,
+            rewind: false,
             width: "100%",
-            gap: width < 500 ? "3rem" : "2rem",
+            gap: width < 500 ? "3rem" : "1rem",
           }}
         >
           {images.map((item) => (

@@ -19,11 +19,14 @@ function Banner() {
   }, []);
   return (
     <div className="banner">
-      <div className="bannerImg" ref={(e) => (app = e)}>
+      {/* <div className="bannerImg" ref={(e) => (app = e)}>
         <video height="100%" width="100%" autoPlay>
           <source src="../assets/Video/T1HAILEY05_PaveTripleBracelet_RC06_H264_CONFORM_CLEAN_No-SOUND.mp4" type="video/mp4" />
         </video>
-      </div>
+      </div> */}
+      <div className="bannerImg" dangerouslysetinnerhtml={{ __html: `<video autoplay><source
+        src="../assets/Video/T1HAILEY05_PaveTripleBracelet_RC06_H264_CONFORM_CLEAN_No-SOUND.mp4" type="video/mp4"
+      source></video>` }} ></div>
     </div>
   );
 }
