@@ -24,8 +24,8 @@ function Header() {
         </a>
       </div>
       <div className="banner" >
-        <div className="bannerImg" ref={e => app = e}>
-          <video autoPlay={true} loop={true} width="100%" height="100%">
+        <div className="bannerImg" ref={(e) => (app = e)}>
+          <video height="100%" width="100%" autoplay='autoplay' loop muted='true' playsinline>
             <source src={Video} type="video/mp4" />
           </video>
         </div>
