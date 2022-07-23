@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Style/banner.scss";
 import gsap from "gsap";
+import video from '../assets/Video/bannerVideo.mp4'
 
 function Banner() {
   let app = useRef(null);
@@ -20,12 +21,13 @@ function Banner() {
   return (
     <div className="banner">
       {/* <div className="bannerImg" ref={(e) => (app = e)}>
-        <video height="100%" width="100%" autoPlay>
-          <source src="../assets/Video/T1HAILEY05_PaveTripleBracelet_RC06_H264_CONFORM_CLEAN_No-SOUND.mp4" type="video/mp4" />
+        <video height="100%" width="100%" autoplay='autoplay' loop muted='true' playsinline>
+          <source src={video} type="video/mp4" />
         </video>
       </div> */}
-      <div className="bannerImg" dangerouslysetinnerhtml={{ __html: `<video autoplay><source
-        src="../assets/Video/T1HAILEY05_PaveTripleBracelet_RC06_H264_CONFORM_CLEAN_No-SOUND.mp4" type="video/mp4"
+      <div className="bannerImg" dangerouslysetinnerhtml={{
+        __html: `<video autoplay='autoplay' loop muted='true' playsinline><source
+        src=${video} type="video/mp4"
       source></video>` }} ></div>
     </div>
   );
