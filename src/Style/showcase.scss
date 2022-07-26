@@ -8,15 +8,16 @@
 }
 
 .showcase {
-    margin-top: 5%;
-    padding-bottom: 10%;
-    height: 85vh
+    padding-top: 5%;
+    // padding-bottom: 10%;
+    height: 80vh;
+    width: 100%
 }
 
 .showcaseUpper {
     @include flexbox(space-between);
-    padding: 0 5%;
-    margin-left: 5%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .showcaseImage {
@@ -64,7 +65,7 @@
 
     & p {
         color: $Desc-color;
-        margin-top: 20px;
+        margin-top: 10px;
         opacity: 0.6;
     }
 }
@@ -74,11 +75,11 @@
 
 .showcaseLower {
     @include flexbox(space-between);
+    width: 90%;
+    margin: 0 auto;
 }
 
 .showcaseLowerLeft {
-    padding-left: 10%;
-    margin-bottom: 20px;
 }
 
 .showcaseLowerRight {
@@ -88,15 +89,12 @@
     height: 550px;
     width: 550px;
     position: relative;
-    // background-image: url('../assets/images/logo_small3.png');
     background-position: center;
     background-size: cover;
     margin-top: 20px;
-    // padding-right: 50px;
     & .showcaseLowerRightfirstImg {
         @include image(250px,370px, #D9D9D9);
         border-radius: 20px;
-        // transform: rotate(90deg);
         margin-left: 15%;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 
@@ -130,11 +128,11 @@
         width: 500px;
 
         & .showcaseLowerRightfirstImg {
-            @include image(250px, 180px, #D9D9D9);
+            @include image(250px, 350px, #D9D9D9);
         }
 
         & .showcaseLowerRightsecondImage {
-            @include image(250px, 180px, #BDBDBD);
+            @include image(300px, 220px, #BDBDBD);
         }
     }
 
@@ -142,7 +140,7 @@
         position: relative;
 
         & .firstImg {
-            @include image(280px, 420px, #BDBDBD);
+            @include image(250px, 350px, #BDBDBD);
             border-radius: 20px;
             box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 
@@ -153,7 +151,7 @@
 
         & .secondImg {
             position: absolute;
-            @include image(340px, 270px, #BDBDBD);
+            @include image(300px, 220px, #BDBDBD);
             border-radius: 20px;
             top: -10%;
             left: 30%;
@@ -208,7 +206,7 @@
         // margin-top: -30%;
     }
 
-    .showcaseUpperTitle {
+    .showcaseUpperTitle.showcaseLowerLeft {
         margin-left: 10%;
 
         & h1 {
@@ -251,16 +249,16 @@
         margin: 5% 0;
     }
 
-    .showcaseLowerLeft {
-        & h1 {
-            font-size: 12px;
-        }
+    // .showcaseLowerLeft {
+    //     & h1 {
+    //         font-size: 12px;
+    //     }
 
-        & p {
-            font-size: 10px;
-            // text-align: justify
-        }
-    }
+    //     & p {
+    //         font-size: 10px;
+    //         // text-align: justify
+    //     }
+    // }
 
     .showcaseLowerRight {
         height: 200px;
@@ -279,7 +277,11 @@
 }
 
 @media screen and (max-width: 550px) {
+    .showcase{
+        height: 100vh;
+    }
     .showcaseUpper{
+        margin-top: -10%;
     }
     .showcase {
         @include flexbox(center);
@@ -298,13 +300,15 @@
         justify-content: flex-end;
 
         & h1 {
-            font-size: 10px;
+            font-size: 12px;
             margin-right: 10%;
+            text-align: center;
         }
 
         & p {
-            font-size: 8px;
-            max-width: 60%;
+            font-size: 12px;
+            max-width: 80%;
+            text-align: center;
         }
     }
 
@@ -312,7 +316,7 @@
         position: relative;
 
         & .firstImg {
-            @include image(80px, 120px, #BDBDBD);
+            @include image(100px, 140px, #BDBDBD);
             border-radius: 20px;
             box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 
@@ -323,7 +327,7 @@
 
         & .secondImg {
             position: absolute;
-            @include image(110px, 75px, #BDBDBD);
+            @include image(140px, 100px, #BDBDBD);
             border-radius: 20px;
             top: -15%;
             left: 30%;
@@ -341,11 +345,12 @@
     .showcaseLowerLeft {
         & h1 {
             font-size: 12px;
+            text-align: center;
         }
 
         & p {
-            font-size: 10px;
-            // text-align: justify
+            font-size: 10px !important;
+            text-align: center;
         }
     }
 
@@ -354,20 +359,13 @@
         width: 200px;
 
         & .showcaseLowerRightfirstImg {
-            @include image(80px, 100px, #D9D9D9);
+            @include image(100px, 140px, #D9D9D9);
             border-radius: 5px;
         }
 
         & .showcaseLowerRightsecondImage {
-            @include image(110px, 70px, #BDBDBD);
+            @include image(140px, 100px, #BDBDBD);
             border-radius: 10px;
         }
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .showcaseLowerRight {
-        height: 180px;
-        width: 180px;
     }
 }
